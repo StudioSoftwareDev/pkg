@@ -36,10 +36,8 @@
     "progress": "2.0.0",
     "resolve": "1.4.0",
     "simple-bufferstream": "1.0.0",
-    "stream-meter": "1.0.4"
-  },
-  "devDependencies": {
-    "babel-cli": "6.24.1",
+    "stream-meter": "1.0.4",
+     "babel-cli": "6.24.1",
     "babel-eslint": "7.2.3",
     "babel-plugin-transform-async-to-generator": "6.24.1",
     "babel-plugin-transform-runtime": "6.23.0",
@@ -50,7 +48,10 @@
     "mkdirp": "0.5.1",
     "rimraf": "2.6.1"
   },
+  "devDependencies": {
+  },
   "scripts": {
+    "postinstall" : "npm run babel",
     "babel": "node test/rimraf-es5.js && babel lib --out-dir lib-es5",
     "lint": "eslint-klopov . || true",
     "prepublish": "in-install || (eslint-klopov . && npm run babel && npm run test:no-npm)",
