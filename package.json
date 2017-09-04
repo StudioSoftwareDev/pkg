@@ -50,7 +50,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "postinstall": "npm run babel",
     "babel": "node test/rimraf-es5.js && babel lib --out-dir lib-es5",
     "lint": "eslint-klopov . || true",
     "prepublish": "in-install || (eslint-klopov . && npm run babel && npm run test:no-npm)",
